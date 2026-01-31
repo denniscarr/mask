@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://ddoh8hmu3hd4n"]
+
+[ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_1uhir"]
+[ext_resource type="Texture2D" uid="uid://bhsqydrxupanq" path="res://sprites/tutorial_3.png" id="2_i06w6"]
+[ext_resource type="PackedScene" uid="uid://ce3p0qo2o6388" path="res://fire/fire.tscn" id="3_1uhir"]
+
+[sub_resource type="Gradient" id="Gradient_1uhir"]
+colors = PackedColorArray(0.46400005, 0.8, 0.5592, 1, 0.7, 0.87500006, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rxx7b"]
+gradient = SubResource("Gradient_1uhir")
+
+[node name="LevelIntro" unique_id=650837852 instance=ExtResource("1_1uhir")]
+
+[node name="Tutorial1" type="Sprite2D" parent="." index="0" unique_id=1409912106]
+visible = false
+modulate = Color(1, 0.25, 0.25, 1)
+position = Vector2(433, 90)
+texture = ExtResource("2_i06w6")
+
+[node name="Background" parent="." index="1" unique_id=1273324262]
+position = Vector2(400, 270.024)
+texture = SubResource("GradientTexture2D_rxx7b")
+
+[node name="Player" parent="." index="2" unique_id=14188593]
+position = Vector2(171, 287)
+
+[node name="Goal" parent="." index="3" unique_id=1783309156]
+position = Vector2(592, 363)
+
+[node name="CollisionShape2D" parent="Wall3" parent_id_path=PackedInt32Array(209035460) index="0" unique_id=2062842234]
+position = Vector2(0, 2)
+
+[node name="Fire" parent="." index="8" unique_id=873811837 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 302)
+
+[node name="Fire2" parent="." index="9" unique_id=1856483607 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 244)
+
+[node name="Fire3" parent="." index="10" unique_id=1955837128 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 184)
+
+[node name="Fire24" parent="." index="11" unique_id=1531233282 instance=ExtResource("3_1uhir")]
+position = Vector2(271, 302)
+
+[node name="Fire34" parent="." index="12" unique_id=401761660 instance=ExtResource("3_1uhir")]
+position = Vector2(271, 244)
+
+[node name="Fire35" parent="." index="13" unique_id=1822639071 instance=ExtResource("3_1uhir")]
+position = Vector2(271, 184)
+
+[node name="Fire36" parent="." index="14" unique_id=705329683 instance=ExtResource("3_1uhir")]
+position = Vector2(461, 419)
+
+[node name="Fire37" parent="." index="15" unique_id=1250116513 instance=ExtResource("3_1uhir")]
+position = Vector2(461, 361)
+
+[node name="Fire38" parent="." index="16" unique_id=634306009 instance=ExtResource("3_1uhir")]
+position = Vector2(461, 301)
+
+[node name="Fire4" parent="." index="17" unique_id=960296827 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 124)
+
+[node name="Fire5" parent="." index="18" unique_id=2140425263 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 424)
+
+[node name="Fire6" parent="." index="19" unique_id=563082868 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 364)
+
+[node name="Fire13" parent="." index="20" unique_id=1375478133 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 302)
+
+[node name="Fire19" parent="." index="21" unique_id=639420937 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 244)
+
+[node name="Fire20" parent="." index="22" unique_id=346287189 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 184)
+
+[node name="Fire21" parent="." index="23" unique_id=1331404110 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 124)
+
+[node name="Fire22" parent="." index="24" unique_id=685584209 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 424)
+
+[node name="Fire23" parent="." index="25" unique_id=203811816 instance=ExtResource("3_1uhir")]
+position = Vector2(715, 364)
+
+[node name="Fire7" parent="." index="26" unique_id=337189941 instance=ExtResource("3_1uhir")]
+position = Vector2(85, 484)
+
+[node name="Fire8" parent="." index="27" unique_id=3890036 instance=ExtResource("3_1uhir")]
+position = Vector2(148, 484)
+
+[node name="Fire9" parent="." index="28" unique_id=1538710718 instance=ExtResource("3_1uhir")]
+position = Vector2(209, 484)
+
+[node name="Fire10" parent="." index="29" unique_id=1701410589 instance=ExtResource("3_1uhir")]
+position = Vector2(272, 484)
+
+[node name="Fire11" parent="." index="30" unique_id=299513125 instance=ExtResource("3_1uhir")]
+position = Vector2(335, 484)
+
+[node name="Fire12" parent="." index="31" unique_id=656868131 instance=ExtResource("3_1uhir")]
+position = Vector2(398, 484)
+
+[node name="Fire14" parent="." index="32" unique_id=557315973 instance=ExtResource("3_1uhir")]
+position = Vector2(464, 484)
+
+[node name="Fire15" parent="." index="33" unique_id=748261871 instance=ExtResource("3_1uhir")]
+position = Vector2(525, 484)
+
+[node name="Fire16" parent="." index="34" unique_id=1496456023 instance=ExtResource("3_1uhir")]
+position = Vector2(588, 484)
+
+[node name="Fire17" parent="." index="35" unique_id=1412316479 instance=ExtResource("3_1uhir")]
+position = Vector2(651, 484)
+
+[node name="Fire18" parent="." index="36" unique_id=1981213329 instance=ExtResource("3_1uhir")]
+position = Vector2(714, 484)
+
+[node name="Fire25" parent="." index="37" unique_id=1010244725 instance=ExtResource("3_1uhir")]
+position = Vector2(148, 122)
+
+[node name="Fire26" parent="." index="38" unique_id=1160246543 instance=ExtResource("3_1uhir")]
+position = Vector2(209, 122)
+
+[node name="Fire27" parent="." index="39" unique_id=245673797 instance=ExtResource("3_1uhir")]
+position = Vector2(272, 122)
+
+[node name="Fire28" parent="." index="40" unique_id=225708071 instance=ExtResource("3_1uhir")]
+position = Vector2(335, 122)
+
+[node name="Fire29" parent="." index="41" unique_id=236491428 instance=ExtResource("3_1uhir")]
+position = Vector2(398, 122)
+
+[node name="Fire30" parent="." index="42" unique_id=1140017370 instance=ExtResource("3_1uhir")]
+position = Vector2(464, 122)
+
+[node name="Fire31" parent="." index="43" unique_id=630503475 instance=ExtResource("3_1uhir")]
+position = Vector2(525, 122)
+
+[node name="Fire32" parent="." index="44" unique_id=405815332 instance=ExtResource("3_1uhir")]
+position = Vector2(588, 122)
+
+[node name="Fire33" parent="." index="45" unique_id=1184837818 instance=ExtResource("3_1uhir")]
+position = Vector2(651, 122)

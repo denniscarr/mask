@@ -1,5 +1,15 @@
 [gd_scene format=3 uid="uid://levf3rioxiao"]
 
+[ext_resource type="Script" uid="uid://di6ld7cv0tqw4" path="res://global/game_manager.gd" id="1_bty66"]
+[ext_resource type="PackedScene" uid="uid://pinr246bt2f3" path="res://level/level_intro.tscn" id="2_f1asi"]
+[ext_resource type="PackedScene" uid="uid://ddoh8hmu3hd4n" path="res://level/level_fire.tscn" id="3_tfgyi"]
+[ext_resource type="PackedScene" uid="uid://ymwqmjvgna5r" path="res://level/level_mask_diag_1.tscn" id="4_hygse"]
+
 [node name="Main" type="Node2D" unique_id=1520077453]
 
 [node name="GameManager" type="Node" parent="." unique_id=1655480295]
+script = ExtResource("1_bty66")
+_levels = Array[PackedScene]([ExtResource("2_f1asi"), ExtResource("3_tfgyi"), ExtResource("4_hygse")])
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2021046661]
+anchor_mode = 0

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://pinr246bt2f3"]
+
+[ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_rrwxw"]
+[ext_resource type="Texture2D" uid="uid://dfmgmfk713h13" path="res://sprites/tutorial_2.png" id="2_nkp0b"]
+[ext_resource type="Texture2D" uid="uid://bw1wy0d3hdg80" path="res://sprites/tutorial_1.png" id="3_dq8bv"]
+
+[sub_resource type="Gradient" id="Gradient_rrwxw"]
+colors = PackedColorArray(1, 0.78, 0.7836666, 1, 0.7776667, 1, 0.71000004, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nkp0b"]
+gradient = SubResource("Gradient_rrwxw")
+
+[node name="LevelIntro" unique_id=650837852 instance=ExtResource("1_rrwxw")]
+
+[node name="Tutorial1" type="Sprite2D" parent="." index="0" unique_id=1409912106]
+modulate = Color(1, 0.25, 0.25, 1)
+position = Vector2(443, 123)
+texture = ExtResource("2_nkp0b")
+
+[node name="Tutorial2" type="Sprite2D" parent="." index="1" unique_id=2022491064]
+modulate = Color(0.9124999, 0.25, 1, 1)
+position = Vector2(328, 370)
+texture = ExtResource("3_dq8bv")
+
+[node name="Background" parent="." index="2" unique_id=1273324262]
+texture = SubResource("GradientTexture2D_nkp0b")
+
+[node name="Player" parent="." index="3" unique_id=14188593]
+position = Vector2(89, 110)
+
+[node name="Goal" parent="." index="4" unique_id=1783309156]
+position = Vector2(682, 493)
+
+[node name="CollisionShape2D" parent="Wall3" parent_id_path=PackedInt32Array(209035460) index="0" unique_id=2062842234]
+position = Vector2(0, 2)

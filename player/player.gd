@@ -1,12 +1,15 @@
 class_name Player
 extends CharacterBody2D
 
+signal died
+
 const MASK_OFFSET = Vector2(2, -14)
 
 @export var _default_movement: PlayerMovement
 
 var _equipped_mask: Mask
 var _movement: PlayerMovement
+var _is_dead: bool = false
 
 @onready var _col_area: Area2D = $Area2D
 
@@ -17,6 +20,9 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if _is_dead:
+		return
+
 	_movement.physics_step(delta)
 	move_and_slide()
 
@@ -35,11 +41,20 @@ func _set_movement(new_movement: PlayerMovement):
 	_movement.initialize(self)
 
 
+func _die():
+	_is_dead = true
+	modulate = Color.RED
+	var tween := create_tween()
+	tween.tween_property(self, "modulate:a", 0, 0.8)
+	await tween.finished
+	died.emit()
+
+
 func _on_col_area_entered(area: Area2D):
-	if area.is_in_group("deadly"):
-		queue_free()
+	if not _is_dead and area.is_in_group("deadly"):
+		_die()
 		return
-		
+
 	if area.get_parent() is Mask:
 		var mask := area.get_parent() as Mask
 		if not mask.is_equipped:
