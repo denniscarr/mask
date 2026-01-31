@@ -2,6 +2,7 @@ extends Node
 
 @export var _levels: Array[PackedScene]
 
+@export_category("Node References")
 @export var _money_label: Label
 
 var _current_level: Level
@@ -28,6 +29,8 @@ func _load_level(index: int):
 
 	_current_level.request_restart.connect(_on_level_request_restart)
 	_current_level.win.connect(_on_level_win)
+
+	_current_level.start()
 
 
 func _on_level_request_restart():

@@ -19,8 +19,7 @@ modulate = Color(1, 0.25, 0.25, 1)
 position = Vector2(433, 90)
 texture = ExtResource("2_vd4ya")
 
-[node name="Background" parent="." index="1" unique_id=1273324262]
-position = Vector2(400, 270.024)
+[node name="BGTextureRect" parent="BGCanvasLayer" parent_id_path=PackedInt32Array(1087445996) index="0" unique_id=1647277329]
 texture = SubResource("GradientTexture2D_rxx7b")
 
 [node name="Player" parent="." index="2" unique_id=14188593]

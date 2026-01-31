@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://ba6pgcrxgwgqm"]
+
+[ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_uqfuw"]
+[ext_resource type="Texture2D" uid="uid://bhsqydrxupanq" path="res://sprites/tutorial_3.png" id="2_kjige"]
+[ext_resource type="PackedScene" uid="uid://ce3p0qo2o6388" path="res://fire/fire.tscn" id="3_7c7t0"]
+[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_x.tscn" id="4_nxnle"]
+
+[sub_resource type="Gradient" id="Gradient_1uhir"]
+colors = PackedColorArray(0.46400005, 0.8, 0.5592, 1, 0.7, 0.87500006, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rxx7b"]
+gradient = SubResource("Gradient_1uhir")
+
+[node name="LevelMaskDiag2" unique_id=650837852 instance=ExtResource("1_uqfuw")]
+
+[node name="Tutorial1" type="Sprite2D" parent="." index="0" unique_id=1409912106]
+visible = false
+modulate = Color(1, 0.25, 0.25, 1)
+position = Vector2(433, 90)
+texture = ExtResource("2_kjige")
+
+[node name="BGTextureRect" parent="BGCanvasLayer" parent_id_path=PackedInt32Array(1087445996) index="0" unique_id=1647277329]
+offset_right = 1106.0
+offset_bottom = 999.0
+texture = SubResource("GradientTexture2D_rxx7b")
+
+[node name="Player" parent="." index="3" unique_id=14188593]
+position = Vector2(83, 374)
+
+[node name="Goal" parent="." index="4" unique_id=1783309156]
+position = Vector2(518, 422)
+
+[node name="Wall" parent="." index="5" unique_id=1371383925]
+position = Vector2(0, 522)
+scale = Vector2(1, 1.6800019)
+
+[node name="Wall2" parent="." index="6" unique_id=72683383]
+position = Vector2(1109, 522)
+scale = Vector2(1, 1.6800019)
+
+[node name="Wall3" parent="." index="7" unique_id=209035460]
+position = Vector2(560, 0)
+scale = Vector2(1.5599995, 1)
+
+[node name="CollisionShape2D" parent="Wall3" index="0" unique_id=2062842234]
+position = Vector2(0, 2)
+
+[node name="Fire" parent="." index="8" unique_id=873811837 instance=ExtResource("3_7c7t0")]
+position = Vector2(419, 529)
+
+[node name="Fire2" parent="." index="9" unique_id=846005680 instance=ExtResource("3_7c7t0")]
+position = Vector2(419, 466)
+
+[node name="Fire3" parent="." index="10" unique_id=690007229 instance=ExtResource("3_7c7t0")]
+position = Vector2(419, 402)
+
+[node name="Fire6" parent="." index="11" unique_id=1665729759 instance=ExtResource("3_7c7t0")]
+position = Vector2(485, 529)
+
+[node name="Fire38" parent="." index="12" unique_id=2039130963 instance=ExtResource("3_7c7t0")]
+position = Vector2(419, 342)
+
+[node name="Fire56" parent="." index="13" unique_id=1908014645 instance=ExtResource("3_7c7t0")]
+position = Vector2(552, 525)
+
+[node name="Fire57" parent="." index="14" unique_id=1314069007 instance=ExtResource("3_7c7t0")]
+position = Vector2(637, 525)
+
+[node name="Fire47" parent="." index="15" unique_id=514007917 instance=ExtResource("3_7c7t0")]
+position = Vector2(144, 143)
+
+[node name="Fire42" parent="." index="16" unique_id=262665079 instance=ExtResource("3_7c7t0")]
+position = Vector2(499, 77)
+
+[node name="Fire13" parent="." index="17" unique_id=801531481 instance=ExtResource("3_7c7t0")]
+position = Vector2(72, 532)
+scale = Vector2(1.005102, 1)
+
+[node name="Fire14" parent="." index="18" unique_id=955903662 instance=ExtResource("3_7c7t0")]
+position = Vector2(73, 458)
+
+[node name="Fire15" parent="." index="19" unique_id=1669952451 instance=ExtResource("3_7c7t0")]
+position = Vector2(76, 274)
+
+[node name="Fire21" parent="." index="20" unique_id=332035241 instance=ExtResource("3_7c7t0")]
+position = Vector2(142, 79)
+
+[node name="Fire22" parent="." index="21" unique_id=1655902955 instance=ExtResource("3_7c7t0")]
+position = Vector2(74, 206)
+
+[node name="Fire23" parent="." index="22" unique_id=782294540 instance=ExtResource("3_7c7t0")]
+position = Vector2(74, 143)
+
+[node name="Fire24" parent="." index="23" unique_id=1857445827 instance=ExtResource("3_7c7t0")]
+position = Vector2(74, 79)
+
+[node name="Fire27" parent="." index="24" unique_id=398684764 instance=ExtResource("3_7c7t0")]
+position = Vector2(212, 79)
+
+[node name="Fire31" parent="." index="25" unique_id=16857862 instance=ExtResource("3_7c7t0")]
+position = Vector2(349, 79)
+
+[node name="Fire40" parent="." index="26" unique_id=1548416900 instance=ExtResource("3_7c7t0")]
+position = Vector2(281, 79)
+
+[node name="Fire41" parent="." index="27" unique_id=1314675067 instance=ExtResource("3_7c7t0")]
+position = Vector2(419, 79)
+
+[node name="Fire30" parent="." index="28" unique_id=250658036 instance=ExtResource("3_7c7t0")]
+position = Vector2(652, 78)
+
+[node name="Fire33" parent="." index="29" unique_id=1474878836 instance=ExtResource("3_7c7t0")]
+position = Vector2(584, 78)
+
+[node name="Fire34" parent="." index="30" unique_id=1262097302 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 208)
+
+[node name="Fire48" parent="." index="31" unique_id=75882258 instance=ExtResource("3_7c7t0")]
+position = Vector2(730, 272)
+
+[node name="Fire35" parent="." index="32" unique_id=1846596954 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 145)
+
+[node name="Fire36" parent="." index="33" unique_id=116447083 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 81)
+
+[node name="Fire49" parent="." index="34" unique_id=1091862885 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 461)
+
+[node name="Fire50" parent="." index="35" unique_id=1064286670 instance=ExtResource("3_7c7t0")]
+position = Vector2(730, 525)
+
+[node name="Fire51" parent="." index="36" unique_id=1339663439 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 398)
+
+[node name="Fire52" parent="." index="37" unique_id=413969388 instance=ExtResource("3_7c7t0")]
+position = Vector2(728, 334)
+
+[node name="MaskDiag" parent="." index="38" unique_id=1223717646 instance=ExtResource("4_nxnle")]
+position = Vector2(178, 375)
+
+[node name="Wall4" parent="." index="39" unique_id=1922346968]
+position = Vector2(553, 1001)
+scale = Vector2(1.64, 1)
