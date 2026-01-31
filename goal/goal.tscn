@@ -3,11 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://cag60iy3vhqwn" path="res://sprites/goal.png" id="1_6aq0c"]
 [ext_resource type="Script" uid="uid://crg7ql6om35bl" path="res://goal/goal.gd" id="1_7c8bl"]
 
-[node name="Goal" type="Area2D" unique_id=1783309156 groups=["goal"]]
+[node name="Goal" type="Area2D" unique_id=1783309156 node_paths=PackedStringArray("_value_label") groups=["goal"]]
 script = ExtResource("1_7c8bl")
+_value_label = NodePath("Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031099411]
 texture = ExtResource("1_6aq0c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=489557287]
 polygon = PackedVector2Array(-52, 7, -35, -9, -16, -11, -20, -22, -20, -41, -8, -25, 4, -52, 7, -25, 28, -44, 26, -21, 22, -8, 46, 4, 51, 29, 50, 44, 34, 49, -20, 51, -49, 44, -54, 19)
+
+[node name="Label" type="Label" parent="." unique_id=2001849441]
+offset_left = -38.0
+offset_top = 3.0
+offset_right = 2.0
+offset_bottom = 26.0
+scale = Vector2(1.8904102, 1.6550329)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "$100"
+horizontal_alignment = 1
