@@ -30,8 +30,6 @@ func _load_level(index: int):
 	_current_level.request_restart.connect(_on_level_request_restart)
 	_current_level.win.connect(_on_level_win)
 
-	_current_level.start()
-
 
 func _on_level_request_restart():
 	_load_level(_current_level_index)
