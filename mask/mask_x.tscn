@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c52qe8kg8pvwi"]
+
+[ext_resource type="PackedScene" uid="uid://d4bn5qtsji0a6" path="res://mask/mask.tscn" id="1_3rhce"]
+[ext_resource type="Script" uid="uid://1qjhf6puvrhm" path="res://player/player_movement_diag.gd" id="2_bnjdb"]
+
+[sub_resource type="Resource" id="Resource_chran"]
+script = ExtResource("2_bnjdb")
+metadata/_custom_type_script = "uid://1qjhf6puvrhm"
+
+[node name="MaskDiag" unique_id=1223717646 instance=ExtResource("1_3rhce")]
+_player_movement = SubResource("Resource_chran")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" parent_id_path=PackedInt32Array(1916888071) index="0" unique_id=1226132917]
+polygon = PackedVector2Array(-10, -2, -28, -28, -34, -25, -35, -42, -33, -46, -21, -41, -7, -37, -14, -32, -9, -21, 1, -8, 7, -10, 24, -20, 38, -28, 34, -37, 58, -33, 56, -15, 53, -9, 47, -19, 22, -9, 12, 2, 9, 4, 18, 18, 35, 39, 39, 35, 39, 46, 37, 55, 8, 47, 16, 40, 8, 29, 1, 13, -3, 7, -13, 20, -26, 33, -21, 38, -30, 40, -38, 44, -40, 11, -31, 19, -21, 11, -10, 1)
