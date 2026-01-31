@@ -31,6 +31,12 @@ func _physics_process(delta: float) -> void:
 	if _equipped_mask:
 		_equipped_mask.global_position = global_position + MASK_OFFSET
 
+func get_mask() -> Mask:
+	if _equipped_mask == null:
+		return null
+
+	return _equipped_mask
+
 
 func _equip_mask(mask: Mask):
 	_equipped_mask = mask
