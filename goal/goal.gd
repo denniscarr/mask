@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 
 func _collect():
 	visible = false
-	collected.emit()
+	collected.emit(_value)
 	_is_collected = true
 
 

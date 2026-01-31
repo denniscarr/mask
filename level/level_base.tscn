@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bb5uc6nu74o4k" path="res://player/player.tscn" id="1_01rkt"]
 [ext_resource type="Script" uid="uid://0ipus8kh8s8g" path="res://level/level.gd" id="1_d8qi5"]
 [ext_resource type="PackedScene" uid="uid://dq1unsp1xw1jy" path="res://goal/goal.tscn" id="2_d8qi5"]
+[ext_resource type="PackedScene" uid="uid://bmhp60a17fka6" path="res://global/win_screen.tscn" id="4_j7wmq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01rkt"]
 size = Vector2(64, 600)
@@ -16,10 +17,11 @@ gradient = SubResource("Gradient_01rkt")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8qi5"]
 size = Vector2(800, 72.26142)
 
-[node name="LevelBase" type="Node2D" unique_id=650837852 node_paths=PackedStringArray("_player", "_goal")]
+[node name="LevelBase" type="Node2D" unique_id=650837852 node_paths=PackedStringArray("_player", "_goal", "_win_screen")]
 script = ExtResource("1_d8qi5")
 _player = NodePath("Player")
 _goal = NodePath("Goal")
+_win_screen = NodePath("CanvasLayer/WinScreen")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1273324262]
 z_index = -100
@@ -77,3 +79,9 @@ shape = SubResource("RectangleShape2D_d8qi5")
 [node name="Sprite2D" type="Sprite2D" parent="Wall4" unique_id=1477322391]
 scale = Vector2(12.72, 1.1328)
 texture = SubResource("GradientTexture2D_d8qi5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=214695427]
+
+[node name="WinScreen" parent="CanvasLayer" unique_id=314638802 instance=ExtResource("4_j7wmq")]
+visible = false
+pivot_offset_ratio = Vector2(0.5, 0.5)

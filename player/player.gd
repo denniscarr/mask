@@ -7,6 +7,8 @@ const MASK_OFFSET = Vector2(2, -14)
 
 @export var _default_movement: PlayerMovement
 
+var movement_enabled: bool = true
+
 var _equipped_mask: Mask
 var _movement: PlayerMovement
 var _is_dead: bool = false
@@ -20,7 +22,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if _is_dead:
+	if _is_dead or not movement_enabled:
 		return
 
 	_movement.physics_step(delta)
