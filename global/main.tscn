@@ -1,16 +1,5 @@
 [gd_scene format=3 uid="uid://levf3rioxiao"]
 
-[ext_resource type="PackedScene" uid="uid://bb5uc6nu74o4k" path="res://player/player.tscn" id="1_bty66"]
-[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_x.tscn" id="2_f1asi"]
-[ext_resource type="PackedScene" uid="uid://ce3p0qo2o6388" path="res://fire/fire.tscn" id="3_tfgyi"]
-
 [node name="Main" type="Node2D" unique_id=1520077453]
 
-[node name="Player" parent="." unique_id=14188593 instance=ExtResource("1_bty66")]
-position = Vector2(474, 244)
-
-[node name="Fire" parent="." unique_id=873811837 instance=ExtResource("3_tfgyi")]
-position = Vector2(564, 111)
-
-[node name="MaskDiag" parent="." unique_id=1223717646 instance=ExtResource("2_f1asi")]
-position = Vector2(624, 272)
+[node name="GameManager" type="Node" parent="." unique_id=1655480295]

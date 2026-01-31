@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://3blnnw81pji4"]
+
+[ext_resource type="PackedScene" uid="uid://bb5uc6nu74o4k" path="res://player/player.tscn" id="1_01rkt"]
+[ext_resource type="PackedScene" uid="uid://dq1unsp1xw1jy" path="res://goal/goal.tscn" id="2_d8qi5"]
+
+[node name="LevelBase" type="Node2D" unique_id=650837852]
+
+[node name="Player" parent="." unique_id=14188593 instance=ExtResource("1_01rkt")]
+position = Vector2(173, 164)
+
+[node name="Goal" parent="." unique_id=1783309156 instance=ExtResource("2_d8qi5")]
+position = Vector2(564, 401)
