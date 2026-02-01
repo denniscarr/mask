@@ -21,6 +21,5 @@ func _open():
 
 func _on_area_body_entered(body: Node2D):
 	if body is Player:
-		var mask := (body as Player).get_mask()
-		if mask and mask.lock_type == _lock_type:
+		if (body as Player).has_mask_for_lock(_lock_type):
 			_open()

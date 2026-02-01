@@ -1,9 +1,8 @@
 class_name PlayerMovementDiag
 extends PlayerMovement
 
-const SPEED = 200
 
-func physics_step(delta: float):
+func physics_step(_delta: float):
 	_player.velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("left"):
@@ -18,5 +17,3 @@ func physics_step(delta: float):
 	elif Input.is_action_pressed("down"):
 		_player.velocity.x = -1
 		_player.velocity.y = 1
-	
-	_player.velocity *= SPEED

@@ -3,21 +3,21 @@ extends CharacterBody2D
 
 signal died
 
+const BASE_MOVE_SPEED: float = 200
 const MASK_OFFSET = Vector2(2, -14)
 
 @export var _default_movement: PlayerMovement
 
 var movement_enabled: bool = true
 
-var _equipped_mask: Mask
-var _movement: PlayerMovement
+var _equipped_masks: Array[Mask]
 var _is_dead: bool = false
 
 @onready var _col_area: Area2D = $Area2D
 
 
 func _ready() -> void:
-	_set_movement(_default_movement)
+	_default_movement.initialize(self)
 	_col_area.area_entered.connect(_on_col_area_entered)
 
 
@@ -25,28 +25,29 @@ func _physics_process(delta: float) -> void:
 	if _is_dead or not movement_enabled:
 		return
 
-	_movement.physics_step(delta)
+	var total_speed := BASE_MOVE_SPEED
+	_default_movement.physics_step(delta)
+	for mask: Mask in _equipped_masks:
+		mask.global_position = global_position + MASK_OFFSET
+		mask.player_movement.physics_step(delta)
+		total_speed += mask.player_movement.additional_speed
+
+	velocity *= total_speed
 	move_and_slide()
 
-	if _equipped_mask:
-		_equipped_mask.global_position = global_position + MASK_OFFSET
 
-func get_mask() -> Mask:
-	if _equipped_mask == null:
-		return null
-
-	return _equipped_mask
+func has_mask_for_lock(lock_type: Door.LockType) -> bool:
+	for mask: Mask in _equipped_masks:
+		if mask.lock_type == lock_type:
+			return true
+	return false
 
 
 func _equip_mask(mask: Mask):
-	_equipped_mask = mask
-	_set_movement(_equipped_mask.player_movement)
+	_equipped_masks.push_back(mask)
+	mask.player_movement.initialize(self)
 	mask.is_equipped = true
-
-
-func _set_movement(new_movement: PlayerMovement):
-	_movement = new_movement
-	_movement.initialize(self)
+	mask.get_parent().move_child(mask, mask.get_parent().get_child_count() - 1)
 
 
 func _die():

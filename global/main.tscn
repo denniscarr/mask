@@ -11,7 +11,7 @@
 
 [node name="GameManager" type="Node" parent="." unique_id=1655480295 node_paths=PackedStringArray("_money_label")]
 script = ExtResource("1_bty66")
-_levels = Array[PackedScene]([ExtResource("6_2qufl"), ExtResource("2_ehae2"), ExtResource("3_tfgyi"), ExtResource("4_hygse"), ExtResource("5_ehae2")])
+_levels = Array[PackedScene]([ExtResource("2_ehae2"), ExtResource("3_tfgyi"), ExtResource("4_hygse"), ExtResource("5_ehae2"), ExtResource("6_2qufl")])
 _money_label = NodePath("../CanvasLayer/MarginContainer/PlayerMoney")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=640668116]
