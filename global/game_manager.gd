@@ -20,14 +20,12 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape"):
 		if _game_finished:
 			get_tree().reload_current_scene()
-		# else:
-		# 	_current_level_index += 1
-		# 	_current_level_index = mini(_current_level_index, _levels.size() - 1)
-
-		# 	if _current_level_index > _levels.size() - 1:
-		# 		_do_game_finish()
-		# 	else:
-		# 		_load_level(_current_level_index)
+		else:
+			_current_level_index += 1
+			if _current_level_index > _levels.size() - 1:
+				_do_game_finish()
+			else:
+				_load_level(_current_level_index)
 
 
 func _restart_level():
@@ -62,8 +60,6 @@ func _on_level_win(money_earned: int):
 	_money_label.text = "You have $%s" % _player_money
 
 	_current_level_index += 1
-	_current_level_index = mini(_current_level_index, _levels.size() - 1)
-
 	if _current_level_index > _levels.size() - 1:
 		_do_game_finish()
 	else:
