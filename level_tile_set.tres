@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d138wjep6opdo" path="res://wall/wall.tscn" id="2_sl7sm"]
 [ext_resource type="PackedScene" uid="uid://bimavbfyh5x8g" path="res://door/door_diag.tscn" id="3_sl7sm"]
 [ext_resource type="PackedScene" uid="uid://cx78f5hgg6rqp" path="res://door/door_fast.tscn" id="4_c1oiq"]
+[ext_resource type="PackedScene" uid="uid://1y3jk44rgp78" path="res://door/door_infinity.tscn" id="5_bvxvo"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_c1oiq"]
 resource_name = "LevelStuff"
@@ -14,6 +15,7 @@ scenes/2/scene = ExtResource("2_sl7sm")
 resource_name = "Doors"
 scenes/1/scene = ExtResource("3_sl7sm")
 scenes/2/scene = ExtResource("4_c1oiq")
+scenes/3/scene = ExtResource("5_bvxvo")
 
 [resource]
 tile_size = Vector2i(64, 64)

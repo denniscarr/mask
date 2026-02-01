@@ -8,12 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://c6o3yjpwdll5l" path="res://level/level_mask_fast_1.tscn" id="6_2qufl"]
 [ext_resource type="PackedScene" uid="uid://bq0bu5d2pk856" path="res://level/level_mask_fast_2.tscn" id="7_oq74w"]
 [ext_resource type="PackedScene" uid="uid://3cmx5df47kgv" path="res://global/game_end.tscn" id="7_qewo7"]
+[ext_resource type="PackedScene" uid="uid://bv6453oqcm4h" path="res://level/level_infinity_1.tscn" id="8_8e2d0"]
+[ext_resource type="PackedScene" uid="uid://cofmuvenmao0i" path="res://level/level_infinity_2.tscn" id="9_k48yu"]
+[ext_resource type="PackedScene" uid="uid://c8c4kmhwfilh2" path="res://level/level_infinity_diag.tscn" id="10_k48yu"]
+[ext_resource type="PackedScene" uid="uid://c44xubs2magl2" path="res://level/level_infinity_fast.tscn" id="11_c0b2b"]
 
 [node name="Main" type="Node2D" unique_id=1520077453]
 
 [node name="GameManager" type="Node" parent="." unique_id=1655480295 node_paths=PackedStringArray("_money_label", "_game_finish_screen")]
 script = ExtResource("1_bty66")
-_levels = Array[PackedScene]([ExtResource("2_ehae2"), ExtResource("3_tfgyi"), ExtResource("4_hygse"), ExtResource("5_ehae2"), ExtResource("6_2qufl"), ExtResource("7_oq74w")])
+_levels = Array[PackedScene]([ExtResource("2_ehae2"), ExtResource("3_tfgyi"), ExtResource("4_hygse"), ExtResource("5_ehae2"), ExtResource("6_2qufl"), ExtResource("7_oq74w"), ExtResource("8_8e2d0"), ExtResource("9_k48yu"), ExtResource("10_k48yu"), ExtResource("11_c0b2b")])
 _money_label = NodePath("../HudCanvasLayer/MarginContainer/PlayerMoney")
 _game_finish_screen = NodePath("../GameEndCanvasLayer/GameEnd")
 

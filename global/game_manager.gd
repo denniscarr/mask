@@ -55,7 +55,7 @@ func _on_level_win(money_earned: int):
 	_current_level_index += 1
 	_current_level_index = mini(_current_level_index, _levels.size() - 1)
 
-	if _current_level_index == _levels.size() - 1:
+	if _current_level_index > _levels.size() - 1:
 		_do_game_finish()
 	else:
 		_load_level(_current_level_index)

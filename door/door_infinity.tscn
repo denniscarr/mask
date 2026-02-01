@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://1y3jk44rgp78"]
+
+[ext_resource type="PackedScene" uid="uid://o3gfxhomw487" path="res://door/door_base.tscn" id="1_1vx73"]
+
+[node name="DoorInfinity" unique_id=67950603 instance=ExtResource("1_1vx73")]
+_lock_type = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=1451810111]
+modulate = Color(0, 0, 1, 1)

@@ -1,0 +1,43 @@
+[gd_scene format=4 uid="uid://c8c4kmhwfilh2"]
+
+[ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_2so1k"]
+[ext_resource type="PackedScene" uid="uid://co7gyn8pm5s4v" path="res://mask/mask_infinity.tscn" id="2_obh3t"]
+[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_diag.tscn" id="3_obh3t"]
+
+[sub_resource type="Gradient" id="Gradient_w2hf7"]
+colors = PackedColorArray(1, 0.58000004, 0.58000004, 1, 0.7, 0.82500005, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eo6t3"]
+gradient = SubResource("Gradient_w2hf7")
+fill_to = Vector2(1, 1)
+
+[node name="LevelInfinityDiag1" unique_id=650837852 instance=ExtResource("1_2so1k")]
+_size_x = 1125.0
+
+[node name="BGTextureRect" parent="BGCanvasLayer" parent_id_path=PackedInt32Array(1087445996) index="0" unique_id=1647277329]
+offset_right = 1125.0
+texture = SubResource("GradientTexture2D_eo6t3")
+
+[node name="WallN" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="0" unique_id=1742141024]
+position = Vector2(562.5, 0)
+
+[node name="WallS" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="1" unique_id=1721421304]
+position = Vector2(562.5, 600)
+
+[node name="WallE" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="3" unique_id=963827298]
+position = Vector2(1125, 300)
+
+[node name="Player" parent="." index="4" unique_id=14188593]
+position = Vector2(140, 320)
+
+[node name="Goal" parent="." index="5" unique_id=1783309156]
+position = Vector2(139, 497)
+
+[node name="TileMapLayer" parent="." index="6" unique_id=120144868]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAgACAAAAAAAAAAAAAgADAAAAAAAAAAAAAgAEAAAAAAAAAAAAAgAEAAYAAAAAAAAAAgAEAAcAAAAAAAAAAgAEAAgAAAAAAAAAAgAEAAUAAAAAAAAAAgAEAAQAAAAAAAAAAgAFAAUAAAAAAAAAAgAGAAUAAAAAAAAAAgAFAAEAAAAAAAAAAQAGAAEAAAAAAAAAAQAHAAEAAAAAAAAAAQAIAAEAAAAAAAAAAQAIAAUAAAAAAAAAAQAKAAQAAAAAAAAAAQAJAAEAAAAAAAAAAQAKAAEAAAAAAAAAAQALAAEAAAAAAAAAAQAMAAEAAAAAAAAAAQANAAEAAAAAAAAAAQAOAAEAAAAAAAAAAQAPAAEAAAAAAAAAAQAQAAEAAAAAAAAAAQAQAAIAAAAAAAAAAQAQAAMAAAAAAAAAAQAQAAQAAAAAAAAAAQAQAAUAAAAAAAAAAQAQAAYAAAAAAAAAAQAQAAcAAAAAAAAAAQAQAAgAAAAAAAAAAQAPAAgAAAAAAAAAAQAOAAgAAAAAAAAAAQANAAgAAAAAAAAAAQAMAAgAAAAAAAAAAQALAAgAAAAAAAAAAQAKAAgAAAAAAAAAAQAJAAgAAAAAAAAAAQAIAAgAAAAAAAAAAQAHAAgAAAAAAAAAAQAGAAgAAAAAAAAAAgAFAAgAAAAAAAAAAgAGAAQAAAAAAAAAAQAFAAQAAAAAAAAAAQAEAAEAAAAAAAAAAgAEAAMAAAAAAAAAAgAIAAIAAAAAAAAAAQAJAAUAAAAAAAAAAQAKAAUAAAAAAAAAAQAMAAIAAAAAAAAAAQALAAUAAAAAAAAAAQAMAAUAAAAAAAAAAQANAAUAAAAAAAAAAQABAAYAAQAAAAAAAwACAAYAAQAAAAAAAwADAAYAAQAAAAAAAwAEAAkAAAAAAAAAAgAHAAkAAAAAAAAAAgAGAAkAAAAAAAAAAgAFAAkAAAAAAAAAAgAHAAUAAAAAAAAAAQA=")
+
+[node name="MaskInfinity" parent="." index="7" unique_id=1223717646 instance=ExtResource("2_obh3t")]
+position = Vector2(362, 430)
+
+[node name="MaskDiag" parent="." index="8" unique_id=711609869 instance=ExtResource("3_obh3t")]
+position = Vector2(333, 141)
