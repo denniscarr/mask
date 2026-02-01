@@ -1,0 +1,51 @@
+[gd_scene format=4 uid="uid://c6o3yjpwdll5l"]
+
+[ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_r788y"]
+[ext_resource type="Texture2D" uid="uid://bhsqydrxupanq" path="res://sprites/tutorial_3.png" id="2_bw1en"]
+[ext_resource type="PackedScene" uid="uid://de26xfmtrwidu" path="res://mask/mask_fast.tscn" id="3_r788y"]
+
+[sub_resource type="Gradient" id="Gradient_1uhir"]
+colors = PackedColorArray(0.46400005, 0.8, 0.5592, 1, 0.7, 0.87500006, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rxx7b"]
+gradient = SubResource("Gradient_1uhir")
+
+[node name="LevelMaskDiag2" unique_id=650837852 instance=ExtResource("1_r788y")]
+_size_x = 864.0
+_size_y = 664.0
+
+[node name="Tutorial1" type="Sprite2D" parent="." index="0" unique_id=1409912106]
+visible = false
+modulate = Color(1, 0.25, 0.25, 1)
+position = Vector2(433, 90)
+texture = ExtResource("2_bw1en")
+
+[node name="BGTextureRect" parent="BGCanvasLayer" parent_id_path=PackedInt32Array(1087445996) index="0" unique_id=1647277329]
+offset_left = -1.0
+offset_right = 863.0
+offset_bottom = 664.0
+texture = SubResource("GradientTexture2D_rxx7b")
+
+[node name="WallN" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="0" unique_id=1742141024]
+position = Vector2(432, 0)
+
+[node name="WallS" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="1" unique_id=1721421304]
+position = Vector2(432, 664)
+
+[node name="WallW" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="2" unique_id=1652649850]
+position = Vector2(0, 332)
+
+[node name="WallE" parent="Walls" parent_id_path=PackedInt32Array(1910068367) index="3" unique_id=963827298]
+position = Vector2(864, 332)
+
+[node name="Player" parent="." index="5" unique_id=14188593]
+position = Vector2(94, 558)
+
+[node name="Goal" parent="." index="6" unique_id=1783309156]
+position = Vector2(715, 534)
+
+[node name="TileMapLayer" parent="." index="7" unique_id=120144868]
+tile_map_data = PackedByteArray("AAAJAAYAAAAAAAAAAgAJAAcAAAAAAAAAAQAJAAgAAAAAAAAAAQAJAAkAAAAAAAAAAQAJAAUAAAAAAAAAAgAJAAQAAAAAAAAAAQABAAUAAAAAAAAAAgABAAQAAAAAAAAAAgABAAIAAAAAAAAAAQABAAEAAAAAAAAAAQACAAEAAAAAAAAAAQADAAEAAAAAAAAAAQAEAAEAAAAAAAAAAQAFAAEAAAAAAAAAAQAGAAEAAAAAAAAAAQAHAAEAAAAAAAAAAQAIAAEAAAAAAAAAAQAJAAEAAAAAAAAAAQAKAAEAAAAAAAAAAQALAAEAAAAAAAAAAQAMAAEAAAAAAAAAAQAMAAIAAAAAAAAAAQAMAAMAAAAAAAAAAQABAAMAAAAAAAAAAQAGAAcAAAAAAAAAAQAFAAcAAAAAAAAAAQAEAAcAAAAAAAAAAQADAAcAAAAAAAAAAQACAAcAAAAAAAAAAQABAAcAAAAAAAAAAQABAAYAAAAAAAAAAgACAAQAAAAAAAAAAQADAAQAAAAAAAAAAQAEAAQAAAAAAAAAAQAGAAQAAAAAAAAAAQAHAAQAAAAAAAAAAQAIAAQAAAAAAAAAAQAMAAQAAAAAAAAAAgAMAAUAAAAAAAAAAgAMAAYAAAAAAAAAAgAKAAYAAAAAAAAAAgAKAAUAAAAAAAAAAgAKAAQAAAAAAAAAAgA=")
+
+[node name="MaskFast" parent="." index="8" unique_id=1223717646 instance=ExtResource("3_r788y")]
+position = Vector2(393, 556)
