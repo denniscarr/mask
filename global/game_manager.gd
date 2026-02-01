@@ -17,8 +17,17 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if _game_finished and event.is_action_pressed("escape"):
-		get_tree().reload_current_scene()
+	if event.is_action_pressed("escape"):
+		if _game_finished:
+			get_tree().reload_current_scene()
+		# else:
+		# 	_current_level_index += 1
+		# 	_current_level_index = mini(_current_level_index, _levels.size() - 1)
+
+		# 	if _current_level_index > _levels.size() - 1:
+		# 		_do_game_finish()
+		# 	else:
+		# 		_load_level(_current_level_index)
 
 
 func _restart_level():
