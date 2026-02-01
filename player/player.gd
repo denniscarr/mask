@@ -28,12 +28,15 @@ func _physics_process(delta: float) -> void:
 	var total_speed := BASE_MOVE_SPEED
 	_default_movement.physics_step(delta)
 	for mask: Mask in _equipped_masks:
-		mask.global_position = global_position + MASK_OFFSET
 		mask.player_movement.physics_step(delta)
 		total_speed += mask.player_movement.additional_speed
 
 	velocity *= total_speed
 	move_and_slide()
+
+	for mask: Mask in _equipped_masks:
+		mask.global_position = global_position + MASK_OFFSET
+
 
 
 func has_mask_for_lock(lock_type: Door.LockType) -> bool:

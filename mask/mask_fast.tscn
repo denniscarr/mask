@@ -11,6 +11,7 @@ metadata/_custom_type_script = "uid://dvnnwy0atax17"
 
 [node name="MaskFast" unique_id=1223717646 instance=ExtResource("1_7seo6")]
 _player_movement = SubResource("Resource_0ttjl")
+_lock_type = 2
 
 [node name="Sprite2D" parent="." index="0" unique_id=416566068]
 modulate = Color(1, 1, 0, 1)

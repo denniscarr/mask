@@ -1,7 +1,7 @@
 class_name Door
 extends Node2D
 
-enum LockType { NONE, DIAGONAL }
+enum LockType { NONE, DIAGONAL, FAST }
 
 @export var _lock_type: LockType
 
