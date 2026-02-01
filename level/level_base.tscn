@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dq1unsp1xw1jy" path="res://goal/goal.tscn" id="2_d8qi5"]
 [ext_resource type="PackedScene" uid="uid://bmhp60a17fka6" path="res://global/win_screen.tscn" id="4_j7wmq"]
 [ext_resource type="PackedScene" uid="uid://d138wjep6opdo" path="res://wall/wall.tscn" id="4_tvde0"]
+[ext_resource type="TileSet" uid="uid://0g8si28j2odk" path="res://level_tile_set.tres" id="6_6tqrk"]
 
 [node name="LevelBase" type="Node2D" unique_id=650837852 node_paths=PackedStringArray("_player", "_goal", "_win_screen", "_bg_tex", "_cam", "_wall_n", "_wall_s", "_wall_w", "_wall_e")]
 script = ExtResource("1_d8qi5")
@@ -60,3 +61,7 @@ position = Vector2(173, 164)
 
 [node name="Goal" parent="." unique_id=1783309156 instance=ExtResource("2_d8qi5")]
 position = Vector2(564, 401)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=120144868]
+position = Vector2(-16, -16)
+tile_set = ExtResource("6_6tqrk")

@@ -1,6 +1,10 @@
 class_name Door
 extends Node2D
 
+enum LockType { NONE, DIAGONAL }
+
+@export var _lock_type: LockType
+
 @onready var _body_shape: CollisionShape2D = $StaticBody2D/CollisionShape2D
 @onready var _sprite: Sprite2D = $Sprite2D
 @onready var _area: Area2D = $Area2D
@@ -18,5 +22,5 @@ func _open():
 func _on_area_body_entered(body: Node2D):
 	if body is Player:
 		var mask := (body as Player).get_mask()
-		if mask and mask.modulate == modulate:
+		if mask and mask.lock_type == _lock_type:
 			_open()

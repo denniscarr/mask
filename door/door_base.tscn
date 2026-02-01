@@ -9,7 +9,7 @@ size = Vector2(56, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plcny"]
 size = Vector2(64, 64)
 
-[node name="Door" type="Node2D" unique_id=67950603]
+[node name="DoorBase" type="Node2D" unique_id=67950603]
 script = ExtResource("1_rdd60")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1451810111]

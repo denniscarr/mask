@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bimavbfyh5x8g"]
+
+[ext_resource type="PackedScene" uid="uid://o3gfxhomw487" path="res://door/door_base.tscn" id="1_77v8t"]
+
+[node name="DoorDiag" unique_id=67950603 instance=ExtResource("1_77v8t")]
+modulate = Color(1, 0, 1, 1)

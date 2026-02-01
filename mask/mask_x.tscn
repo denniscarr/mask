@@ -10,6 +10,7 @@ metadata/_custom_type_script = "uid://1qjhf6puvrhm"
 [node name="MaskDiag" unique_id=1223717646 instance=ExtResource("1_3rhce")]
 modulate = Color(1, 0, 1, 1)
 _player_movement = SubResource("Resource_chran")
+_lock_type = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" parent_id_path=PackedInt32Array(1916888071) index="0" unique_id=1226132917]
 visible = false
