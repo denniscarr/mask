@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://3cmx5df47kgv"]
+
+[ext_resource type="Texture2D" uid="uid://n6soeuru6s8u" path="res://sprites/game_finish.png" id="1_4nesy"]
+[ext_resource type="Script" uid="uid://cyrqw1ttutcvd" path="res://global/win_screen.gd" id="2_qfhfl"]
+
+[node name="GameEnd" type="TextureRect" unique_id=1661943749 node_paths=PackedStringArray("_money_label")]
+visible = false
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_4nesy")
+script = ExtResource("2_qfhfl")
+_money_label = NodePath("MoneyLabel")
+
+[node name="Label" type="Label" parent="." unique_id=958758323]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 413.99997
+offset_right = 216.0
+offset_bottom = 436.99997
+scale = Vector2(2.6923053, 2.7844162)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "Your money:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=1530588841]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 382.0
+offset_right = 429.0
+offset_bottom = 431.0
+scale = Vector2(3.5042706, 5.5364532)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "$1000"
+horizontal_alignment = 1

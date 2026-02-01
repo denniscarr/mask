@@ -3,8 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_rrwxw"]
 [ext_resource type="Texture2D" uid="uid://dfmgmfk713h13" path="res://sprites/tutorial_2.png" id="2_nkp0b"]
 [ext_resource type="Texture2D" uid="uid://bw1wy0d3hdg80" path="res://sprites/tutorial_1.png" id="3_dq8bv"]
-[ext_resource type="PackedScene" uid="uid://de26xfmtrwidu" path="res://mask/mask_fast.tscn" id="4_dq8bv"]
-[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_x.tscn" id="5_g3o85"]
 
 [sub_resource type="Gradient" id="Gradient_rrwxw"]
 colors = PackedColorArray(1, 0.78, 0.7836666, 1, 0.7776667, 1, 0.71000004, 1)
@@ -32,9 +30,3 @@ position = Vector2(89, 110)
 
 [node name="Goal" parent="." index="7" unique_id=1783309156]
 position = Vector2(682, 493)
-
-[node name="MaskFast" parent="." index="9" unique_id=1223717646 instance=ExtResource("4_dq8bv")]
-position = Vector2(385, 232)
-
-[node name="MaskDiag" parent="." index="10" unique_id=845677228 instance=ExtResource("5_g3o85")]
-position = Vector2(280, 347)

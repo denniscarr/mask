@@ -2,21 +2,19 @@
 
 [ext_resource type="Script" uid="uid://di6ld7cv0tqw4" path="res://global/game_manager.gd" id="1_bty66"]
 [ext_resource type="PackedScene" uid="uid://pinr246bt2f3" path="res://level/level_intro.tscn" id="2_ehae2"]
-[ext_resource type="PackedScene" uid="uid://ddoh8hmu3hd4n" path="res://level/level_fire.tscn" id="3_tfgyi"]
-[ext_resource type="PackedScene" uid="uid://ymwqmjvgna5r" path="res://level/level_mask_diag_1.tscn" id="4_hygse"]
-[ext_resource type="PackedScene" uid="uid://ba6pgcrxgwgqm" path="res://level/level_mask_diag_2.tscn" id="5_ehae2"]
-[ext_resource type="PackedScene" uid="uid://c6o3yjpwdll5l" path="res://level/level_mask_fast_1.tscn" id="6_2qufl"]
+[ext_resource type="PackedScene" uid="uid://3cmx5df47kgv" path="res://global/game_end.tscn" id="7_qewo7"]
 
 [node name="Main" type="Node2D" unique_id=1520077453]
 
-[node name="GameManager" type="Node" parent="." unique_id=1655480295 node_paths=PackedStringArray("_money_label")]
+[node name="GameManager" type="Node" parent="." unique_id=1655480295 node_paths=PackedStringArray("_money_label", "_game_finish_screen")]
 script = ExtResource("1_bty66")
-_levels = Array[PackedScene]([ExtResource("2_ehae2"), ExtResource("3_tfgyi"), ExtResource("4_hygse"), ExtResource("5_ehae2"), ExtResource("6_2qufl")])
-_money_label = NodePath("../CanvasLayer/MarginContainer/PlayerMoney")
+_levels = Array[PackedScene]([ExtResource("2_ehae2")])
+_money_label = NodePath("../HudCanvasLayer/MarginContainer/PlayerMoney")
+_game_finish_screen = NodePath("../GameEndCanvasLayer/GameEnd")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=640668116]
+[node name="HudCanvasLayer" type="CanvasLayer" parent="." unique_id=640668116]
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=140292280]
+[node name="MarginContainer" type="MarginContainer" parent="HudCanvasLayer" unique_id=140292280]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,7 +25,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="PlayerMoney" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1602704288]
+[node name="PlayerMoney" type="Label" parent="HudCanvasLayer/MarginContainer" unique_id=1602704288]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -35,3 +33,10 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 text = "You have $0"
+
+[node name="GameEndCanvasLayer" type="CanvasLayer" parent="." unique_id=1437205175]
+layer = 3
+
+[node name="GameEnd" parent="GameEndCanvasLayer" unique_id=1661943749 instance=ExtResource("7_qewo7")]
+offset_right = 800.0
+offset_bottom = 600.0
