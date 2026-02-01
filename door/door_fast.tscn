@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://o3gfxhomw487" path="res://door/door_base.tscn" id="1_yo4hm"]
 
 [node name="DoorFast" unique_id=67950603 instance=ExtResource("1_yo4hm")]
-_lock_type = 2
+_lock_type = 1
 
 [node name="Sprite2D" parent="." index="0" unique_id=1451810111]
 modulate = Color(1, 1, 0, 1)

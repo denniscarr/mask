@@ -1,16 +1,9 @@
 [gd_scene format=3 uid="uid://c52qe8kg8pvwi"]
 
-[ext_resource type="PackedScene" uid="uid://d4bn5qtsji0a6" path="res://mask/mask.tscn" id="1_3rhce"]
-[ext_resource type="Script" uid="uid://1qjhf6puvrhm" path="res://player/player_movement_diag.gd" id="2_bnjdb"]
+[ext_resource type="PackedScene" uid="uid://d4bn5qtsji0a6" path="res://mask/mask.tscn" id="1_v5j1m"]
 
-[sub_resource type="Resource" id="Resource_chran"]
-script = ExtResource("2_bnjdb")
-metadata/_custom_type_script = "uid://1qjhf6puvrhm"
-
-[node name="MaskDiag" unique_id=1223717646 instance=ExtResource("1_3rhce")]
+[node name="MaskDiag" unique_id=1223717646 instance=ExtResource("1_v5j1m")]
 modulate = Color(1, 0, 1, 1)
-_player_movement = SubResource("Resource_chran")
-_lock_type = 1
 
 [node name="Sprite2D" parent="." index="0" unique_id=416566068]
 position = Vector2(5, 8)

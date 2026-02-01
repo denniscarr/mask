@@ -6,11 +6,11 @@
 
 [sub_resource type="Resource" id="Resource_0ttjl"]
 script = ExtResource("2_wqwko")
-_additional_speed = 800.0
 metadata/_custom_type_script = "uid://dvnnwy0atax17"
 
 [node name="MaskFast" unique_id=1223717646 instance=ExtResource("1_7seo6")]
 _player_movement = SubResource("Resource_0ttjl")
+_mask_type = 1
 _lock_type = 2
 
 [node name="Sprite2D" parent="." index="0" unique_id=416566068]

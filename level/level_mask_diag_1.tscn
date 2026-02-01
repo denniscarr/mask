@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://3blnnw81pji4" path="res://level/level_base.tscn" id="1_wbnet"]
 [ext_resource type="Texture2D" uid="uid://bhsqydrxupanq" path="res://sprites/tutorial_3.png" id="2_vd4ya"]
-[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_x.tscn" id="4_vd4ya"]
+[ext_resource type="PackedScene" uid="uid://c52qe8kg8pvwi" path="res://mask/mask_diag.tscn" id="4_vd4ya"]
 
 [sub_resource type="Gradient" id="Gradient_1uhir"]
 colors = PackedColorArray(0.46400005, 0.8, 0.5592, 1, 0.7, 0.87500006, 1, 1)

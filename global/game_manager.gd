@@ -51,7 +51,7 @@ func _on_level_request_restart():
 func _on_level_win(money_earned: int):
 	_player_money += money_earned
 	_money_label.text = "You have $%s" % _player_money
-	
+
 	_current_level_index += 1
 	_current_level_index = mini(_current_level_index, _levels.size() - 1)
 
